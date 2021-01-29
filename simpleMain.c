@@ -1,7 +1,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include "bubble.h"
-
+#include "selection.h"
+#include "insertion.h"
 int main(int argc, char *argv[]){
 
   int i,N;
@@ -19,6 +20,8 @@ int main(int argc, char *argv[]){
         a[i-1]=atoi(argv[i]);
   }
 
-  bubble(a,N);
+  //bubble(a,N);
+ // selection(a,N);
+ insertion(a,N);
   return 0;
 }
