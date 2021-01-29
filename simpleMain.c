@@ -2,17 +2,23 @@
 #include<stdlib.h>
 #include "bubble.h"
 
-int main(int argc, char **argv){
-  printf("There are %d arguments\n",argc-1);
+int main(int argc, char *argv[]){
+
   int i,N;
+  printf("There are %d arguments\n",argc);
+  for(i=0;i<argc;i++){
+         printf("argv %d: %s\n",i,argv[i]); 
+  }
+
   N=argc-1;
+
   int *a;
   a=(int*) malloc(sizeof(int)*N);
-  
+
   for(i=1;i<argc;i++){
-    //printf("argument#%d is %d\n",i, atoi(argv[i]));
-    a[i-1]=atoi(argv[i]);
+        a[i-1]=atoi(argv[i]);
   }
+
   bubble(a,N);
   return 0;
 }
